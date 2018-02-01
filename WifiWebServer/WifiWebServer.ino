@@ -88,7 +88,11 @@ void loop() {
   client.println(""); //  do not forget this one
   client.println("<!DOCTYPE HTML>");
   client.println("<html>");
- 
+
+  int temperature = analogRead(A0);
+  client.print("Temperature is: ");
+  client.print(temperature);
+  client.println("deg. C");
   client.print("Led pin is now: ");
  
   if(value == HIGH) {
